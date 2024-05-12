@@ -20,3 +20,4 @@ class Pet {
       $this->alive = $alive;
     }
 }
+
