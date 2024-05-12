@@ -21,3 +21,20 @@ class Pet {
     }
 }
 
+function pet_menu() {
+  add_menu_page(
+    'My Pet', // Page Title
+    'Pet', // Menu Title
+    'manage_options', // capability
+    'my-pet', // slug
+    'pet_admin_page',
+    'dashicons-pets',
+    20
+  );
+}
+
+add_action ('admin_menu', 'pet_menu');
+
+function pet_admin_page() {
+  echo '<h1>My Pet</h1>';
+}
